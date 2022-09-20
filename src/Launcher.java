@@ -16,7 +16,28 @@ class Launcher {
                 break;
             }
 
+            if (word.equals("fibo"))  {
+                Scanner myFibo = new Scanner(System.in);
+
+                System.out.println("Enter a number for Fibonacci :");
+                String fibo = myFibo.nextLine();
+
+                int i = Integer.parseInt(fibo);  
+                System.out.println(Fibo(i));
+                break;
+            }
+
             System.out.println("Unknown command");
         }
+    }
+
+
+    public static int Fibo(int n) {
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return Fibo(n - 1) + Fibo(n - 2);
     }
 }
